@@ -1,16 +1,11 @@
 package com.sdsu.passwordapi.service;
 
 import com.sdsu.passwordapi.model.User;
-import com.sdsu.passwordapi.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-@Service
-public class UserService {
- @Autowired
-    UserRepository userRepository;
+import java.util.List;
 
-    public User saveUser (User user){
-       return userRepository.save(user);
-    }
+public interface UserService {
+
+     User saveUser (User user);
+      List<User> getAllusers ();
 }
